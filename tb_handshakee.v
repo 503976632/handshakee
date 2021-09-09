@@ -2,7 +2,7 @@
 `timescale 1ns/1ps
 
 module tb_handshakee (); /* this is automatically generated */
-
+	
 	// clock
 	reg clk;
 	initial begin
@@ -10,7 +10,6 @@ module tb_handshakee (); /* this is automatically generated */
 		forever #(1) clk = ~clk;
 	end
 
-	// asynchronous reset
 	reg rst_n;
 	initial begin
 		rst_n <= 0;
@@ -27,6 +26,7 @@ module tb_handshakee (); /* this is automatically generated */
 	wire  ready_o;
 	wire  valid_o;
 	wire  data_o;
+
 
 	handshakee inst_handshakee
 		(
